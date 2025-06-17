@@ -1,0 +1,23 @@
+{
+  "name": "saudeco",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000s\u0000a\u0000u\u0000d\u0000e\u0000c\u0000o\u0000-\u0000d\u0000o\u0000j\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
+  }
+}
