@@ -11,6 +11,6 @@ test.describe('purchase scenarios', { tag: ['@smoke', '@purchase'] }, () => {
     await loginPage.goto();
     await loginPage.userLoginIn(standartUser);
     await inventoryPage.addItemToTheCart('backpack');
-    await inventoryPage.clickOnCart();
+    await inventoryPage.header.clickOnCart();
   });
 });
