@@ -7,7 +7,7 @@ export class BasePage {
     this.page = page;
   }
 
-  async goto() {
-    await this.page.goto('/');
+  async goto(path?: string) {
+    await this.page.goto(`/`);
   }
 }
