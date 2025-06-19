@@ -1,5 +1,5 @@
 export interface Customer {
-  fistName: string;
+  firstName: string;
   lastName: string;
   postalCode: string;
 }
