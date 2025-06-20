@@ -8,6 +8,6 @@ export class BasePage {
   }
 
   async goto(path?: string) {
-    await this.page.goto(`/`);
+    await this.page.goto(`/${path || ''}`);
   }
 }
