@@ -22,11 +22,13 @@ test.describe('purchase scenarios', { tag: ['@smoke', '@purchase'] }, () => {
       await inventoryPage.addItemToTheCart('backpack');
       await inventoryPage.header.clickOnCart();
       await expect(cartPage.item.inventoryItemName).toHaveText('Sauce Labs Backpack');
+      // refactor for not hardcoded price
       await expect(cartPage.item.inventoryItemPrice).toContainText('29.99');
       await cartPage.goToCheckout();
       await checkoutPage.fillCheckoutForm(customer);
       await checkoutPage.continueCheckout();
       await expect(checkoutPage.item.inventoryItemName).toHaveText('Sauce Labs Backpack');
+      // refactor for not hardcoded price
       await expect(checkoutPage.item.inventoryItemPrice).toContainText('29.99');
       await checkoutPage.finishCheckout();
       await expect(checkoutPage.checkouteCompleteHeader).toHaveText('Thank you for your order!');
