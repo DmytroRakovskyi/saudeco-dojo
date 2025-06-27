@@ -33,7 +33,7 @@ export class CheckoutPage extends BasePage {
   }
 
   async fillCheckoutForm(customer: Customer) {
-    await this.firstName.fill(customer.fistName);
+    await this.firstName.fill(customer.firstName);
     await this.lastName.fill(customer.lastName);
     await this.postalCode.fill(customer.postalCode);
   }
