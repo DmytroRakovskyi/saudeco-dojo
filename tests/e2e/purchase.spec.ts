@@ -1,13 +1,12 @@
 import { expect, Page } from '@playwright/test';
 import { test } from '../fixtures/baseFixture';
-
 import { standartUser } from '../../src/test-data/test-users';
 import { customer } from '../../src/test-data/test-customers';
 
 test.describe('purchase scenarios', { tag: ['@smoke', '@purchase'] }, () => {
   test(
     'SAU-001, success purchase',
-    { tag: ['@smoke', '@success', '@purchase'] },
+    { tag: ['@success'] },
     async ({ page, loginPage, inventoryPage, cartPage, checkoutPage }) => {
       await loginPage.goto();
       await loginPage.userLoginIn(standartUser);
