@@ -1,4 +1,4 @@
-import { Customer } from '../types/customer';
+import { Customer } from '../../src/types/customer';
 import { faker } from '@faker-js/faker';
 
 export const customer: Customer = {

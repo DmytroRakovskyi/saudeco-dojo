@@ -22,16 +22,10 @@ export class InventoryPage extends BasePage {
   }
 
   async addItemToTheCart(name: string) {
-    const item: Locator = this.item.inventoryItem.filter({
-      has: this.item.inventoryItemName.filter({ hasText: name }),
-    });
-    await item.getByRole('button', { name: 'add to cart' }).click();
+    await this.item.itemClickAddToCart(name);
   }
 
   async removeItemFromTheCart(name: string) {
-    const item: Locator = this.item.inventoryItem.filter({
-      has: this.item.inventoryItemName.filter({ hasText: name }),
-    });
-    await item.getByRole('button', { name: 'remove' }).click();
+    await this.item.itemClickRemoveFromCart(name);
   }
 }

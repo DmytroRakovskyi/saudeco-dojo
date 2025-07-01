@@ -14,4 +14,18 @@ export class Item {
     this.inventoryItemQuantity = page.getByTestId('item-quantity');
     this.inventoryItemPrice = page.getByTestId('inventory-item-price');
   }
+
+  async itemClickAddToCart(name: string) {
+    const getItem: Locator = this.inventoryItem.filter({
+      has: this.inventoryItemName.filter({ hasText: name }),
+    });
+    await getItem.getByRole('button', { name: 'add to cart' }).click();
+  }
+
+  async itemClickRemoveFromCart(name: string) {
+    const getItem: Locator = this.inventoryItem.filter({
+      has: this.inventoryItemName.filter({ hasText: name }),
+    });
+    await getItem.getByRole('button', { name: 'remove' }).click();
+  }
 }
